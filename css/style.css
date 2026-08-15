@@ -34,17 +34,18 @@ ul {
 }
 
 .site-header {
-    position: sticky;
+    position: absolute;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
-    background-color: var(--surface);
-    border-bottom: 1px solid var(--border);
+    background-color: transparent;
+    border-bottom: none;
 }
 
 .navbar {
-    width: 90%;
-    max-width: 1200px;
-    min-height: 72px;
+    width: 84%;
+    min-height: 88px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -52,7 +53,7 @@ ul {
 }
 
 .logo {
-    color: var(--accent);
+    color: #fff4dc;
     font-size: 1.4rem;
     font-weight: 700;
 }
@@ -64,12 +65,14 @@ ul {
 }
 
 .nav-links a {
+    color: #fff4dc;
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .nav-links a:hover {
-    color: var(--accent);
+    color: #ffffff;
+    opacity: 0.75;
 }
 
 section {
@@ -88,4 +91,79 @@ h1 {
 
 h2 {
     font-size: 2.25rem;
+}
+
+/* second part */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff4dc;
+    background-image: url("../images/hero-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    width: 42%;
+    max-width: 560px;
+}
+
+.hero-label {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(3.5rem, 6vw, 6.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+}
+
+.hero-role {
+    margin-top: 22px;
+    font-size: clamp(1.2rem, 2vw, 1.7rem);
+    font-weight: 600;
+}
+
+.hero-summary {
+    max-width: 500px;
+    margin-top: 16px;
+    font-size: 1.05rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.button-primary {
+    color: var(--accent);
+    background-color: var(--surface);
+}
+
+.button-secondary {
+    color: #fff4dc;
+    border-color: #fff4dc;
+}
+
+.button:hover {
+    transform: translateY(-2px);
 }
