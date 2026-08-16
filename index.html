@@ -2,13 +2,22 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="witdth=device witdth, intial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta
-              name="description"
-              content="Personal portfolio of Akash Rn. Swain, an aspiring Cloud and Devops Engineer."
-                      >
-               <title> Akash Rn. Swain | Portfolio</title>
-                <link rel="stylesheet" href="css/style.css ">
+            name="description"
+            content="Personal portfolio of Akash Rn. Swain, an aspiring Cloud and DevOps Engineer."
+        >
+
+        <title>Akash Rn. Swain | Portfolio</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        >
+
+        <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
@@ -19,9 +28,9 @@
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Me</a></li>
-                    <li><a href="skills">Skills</a></li>
-                    <li><a href="projects">Projects</a></li>
-                    <li><a href="contact">Contact</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
            </header>
@@ -37,19 +46,26 @@
                  </p>
 
                 <p class="hero-summary">
-                A Computer Science student developing practical skills in cloud
+          A Computer Science graduate developing practical skills in cloud
                  infrastructure, Linux, automation, and modern DevOps tools.
                 </p>
 
-                <div class="hero-actions">
-                <a href="#projects" class="button button-primary">
-                View Projects
-                </a>
+                <p class="availability">
+                <span class="availability-dot" aria-hidden="true"></span>
+                Open to opportunities
+                </p>
 
-                <a href="#contact" class="button button-secondary">
-                Contact Me
-                </a>
-                 </div>
+                <div class="hero-actions">
+    <a href="#projects" class="button button-primary">
+        View Projects
+        <span class="button-arrow" aria-hidden="true">↗</span>
+    </a>
+
+    <a href="#contact" class="button button-secondary">
+        Contact Me
+        <span class="button-arrow" aria-hidden="true">↗</span>
+    </a>
+</div>
                  </div>
                 </section>
 
@@ -62,8 +78,8 @@
                <div class="about-grid">
                <div class="about-copy">
                 <p>
-                I am a Computer Science Grad 
-                interest in DevOps and Cloud Computing I am currently 
+                I am a Computer Science graduate interested in DevOps and
+                Cloud Computing. I am currently
                 developing practical skills in Linux, Git, GitHub, AWS,
                 Docker, and related technologies.
                 </p>
@@ -120,14 +136,121 @@
     </div>
 </section>
 
-                <section id="projects">
-                    <h2>Projects</h2>
-                </section>
+                <section id="projects" class="projects-section">
+    <div class="section-heading">
+        <p class="section-label">Academic Projects</p>
+        <h2>Selected projects I have built through learning and practice.</h2>
+    </div>
 
-                <section id="contact">
-                     <h2>Contact</h2>
-                </section>
+    <div class="projects-grid">
+    <a
+        class="project-card"
+        href="https://github.com/your-username/student-database-project"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="View Student Database Management System project"
+    >
+        <span class="project-number">01</span>
+
+        <h3>Student Database Management System</h3>
+
+        <p class="project-description">
+            A database project designed to store and manage student
+            information, courses, marks, and attendance. SQL operations
+            were used to add, update, delete, search, and display records.
+        </p>
+
+        <div class="project-footer">
+            <ul class="project-tech" aria-label="Technologies used">
+                <li>MySQL</li>
+                <li>SQL</li>
+                <li>MySQL Workbench</li>
+            </ul>
+
+            <span class="project-arrow" aria-hidden="true">↗</span>
+        </div>
+    </a>
+
+    <a
+        class="project-card"
+        href="https://github.com/your-username/aws-ec2-project"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="View AWS EC2 Web Server Deployment project"
+    >
+        <span class="project-number">02</span>
+
+        <h3>AWS EC2 Web Server Deployment</h3>
+
+        <p class="project-description">
+            A cloud project involving the launch of a Linux virtual
+            server using Amazon EC2, secure access through SSH, and the
+            deployment of a basic website on the cloud server.
+        </p>
+
+        <div class="project-footer">
+            <ul class="project-tech" aria-label="Technologies used">
+                <li>AWS EC2</li>
+                <li>Linux</li>
+                <li>SSH</li>
+                <li>HTML</li>
+            </ul>
+
+            <span class="project-arrow" aria-hidden="true">↗</span>
+        </div>
+    </a>
+</div>
+</section>
+
+                <section id="contact" class="contact-section">
+    <div class="section-heading">
+        <p class="section-label">Contact</p>
+        <h2>Open to learning, collaboration, and new opportunities.</h2>
+    </div>
+
+    <div class="contact-grid">
+        <p class="contact-intro">
+            If you would like to discuss an opportunity, project, or anything
+            related to Cloud and DevOps, feel free to contact me through
+            email, GitHub, or LinkedIn.
+        </p>
+
+        <div class="contact-links">
+            <a class="contact-link" href="mailto:your-email@example.com">
+                <span>Email</span>
+                <strong>your-email@example.com</strong>
+                <span aria-hidden="true">↗</span>
+            </a>
+
+            <a
+                class="contact-link"
+                href="https://github.com/your-username"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span>GitHub</span>
+                <strong>github.com/your-username</strong>
+                <span aria-hidden="true">↗</span>
+            </a>
+
+            <a
+                class="contact-link"
+                href="https://www.linkedin.com/in/your-profile"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span>LinkedIn</span>
+                <strong>linkedin.com/in/your-profile</strong>
+                <span aria-hidden="true">↗</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+
            </main>
-    <script src="js/javascript.js"></script>
+
+           
+    <script src="js/script.js"></script>
     </body>
-    </head>
+    </html>

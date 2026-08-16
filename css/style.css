@@ -2,8 +2,11 @@
     --background: #f4ead8;
     --surface: #fffaf0;
     --text: #24201c;
-    --accent: #c94f38;
-    --border: #d9cdbb;
+    --accent: #a41f06;
+    --border: rgba(164, 31, 6, 0.32);
+    --teal: #4cb1a6;
+    --cream: #f8e9c8;
+    --sand: #e8c28e;
 }
 
 * {
@@ -18,7 +21,7 @@ html {
 
 body {
     min-height: 100vh;
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
     color: var(--text);
     background-color: var(--background);
     line-height: 1.6;
@@ -39,7 +42,7 @@ ul {
     left: 0;
     width: 100%;
     z-index: 1000;
-    color: #fff4dc;
+    color: var(--cream);
     background-color: transparent;
     border-bottom: none;
 }
@@ -54,9 +57,10 @@ ul {
 }
 
 .logo {
-    color: #fff4dc;
-    font-size: 1.4rem;
-    font-weight: 700;
+    color: var(--cream);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
 .nav-links {
@@ -66,13 +70,13 @@ ul {
 }
 
 .nav-links a {
-    color: #fff4dc;
+    color: var(--cream);
     font-size: 0.95rem;
     font-weight: 600;
 }
 
 .nav-links a:hover {
-    color: #ffffff;
+    color: var(--cream);
     opacity: 0.75;
 }
 
@@ -80,10 +84,6 @@ section {
     min-height: 100vh;
     padding: 120px 8%;
     scroll-margin-top: 72px;
-}
-
-section:nth-child(even) {
-    background-color: var(--surface);
 }
 
 h1 {
@@ -104,7 +104,7 @@ h2 {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    color: #fff4dc;
+    color: var(--cream);
     background-image: url("../images/hero-background.png");
     background-size: cover;
     background-position: center;
@@ -125,14 +125,17 @@ h2 {
 }
 
 .hero h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
     font-size: clamp(3.5rem, 6vw, 6.5rem);
+    font-weight: 600;
     line-height: 0.95;
     letter-spacing: -0.04em;
 }
 
 .hero-role {
     margin-top: 22px;
-    font-size: clamp(1.2rem, 2vw, 1.7rem);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
     font-weight: 600;
 }
 
@@ -142,36 +145,73 @@ h2 {
     font-size: 1.05rem;
 }
 
+.availability {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+    color: var(--teal);
+    font-weight: 500;
+}
+
+.availability-dot {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    background-color: var(--teal);
+    border-radius: 50%;
+}
+
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 32px;
-    
+    gap: 16px;
+    margin-top: 18px;
 }
 
 .button {
+    min-width: 200px;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    padding: 12px 24px;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 14px 18px;
     border: 1px solid transparent;
-    border-radius: 999px;
-    font-weight: 600;
+    border-radius: 4px;
+    font-weight: 500;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .button-primary {
-    color: var(--accent);
-    background-color: var(--surface);
+    color: #17130e;
+    background-color: var(--teal);
 }
 
 .button-secondary {
-    color: #fff4dc;
-    border-color: #fff4dc;
+    color: var(--cream);
+    background-color: transparent;
+    border-color: var(--cream);
+}
+
+.button-primary:hover {
+    background-color: #5cc4b7;
+}
+
+.button-secondary:hover {
+    color: #17130e;
+    background-color: var(--cream);
 }
 
 .button:hover {
     transform: translateY(-2px);
+}
+
+.button-arrow {
+    font-size: 1.3rem;
+    line-height: 1;
 }
 
 
@@ -197,7 +237,9 @@ h2 {
 .section-heading h2 {
     max-width: 900px;
     margin-top: 12px;
+    font-family: "Cormorant Garamond", Georgia, serif;
     font-size: clamp(2.6rem, 5vw, 5rem);
+    font-weight: 600;
     line-height: 1.08;
     letter-spacing: -0.03em;
 }
@@ -277,8 +319,176 @@ h2 {
 }
 
 .skill-tag:hover {
-    color: var(--surface);
+    color: var(--cream);
     background-color: var(--accent);
     transform: translateY(-2px);
 }
+
+
+
+
+/* fifth part project */
+
+
+
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 56px;
+    background-color: var(--background);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.project-card {
+    min-height: 390px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    background-color: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.project-number {
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.project-card h3 {
+    max-width: 500px;
+    margin-top: 48px;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.project-description {
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.project-footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: auto;
+    padding-top: 32px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-tech li {
+    padding: 7px 12px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 0.85rem;
+}
+
+.project-arrow {
+    flex-shrink: 0;
+    color: var(--teal);
+    font-size: 1.8rem;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.project-card:hover .project-arrow {
+    transform: translate(3px, -3px);
+}
+
+.project-card:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+}
+
+
+
+/* sixth part contact */
+
+
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 64px;
+    color: var(--cream);
+    background-color: var(--text);
+}
+
+.contact-section .section-label {
+    color: #ff765a;
+}
+
+.contact-section .section-heading h2 {
+    max-width: 1100px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.contact-intro {
+    max-width: 500px;
+    color: #d9cdbb;
+    font-size: 1.05rem;
+}
+
+.contact-links {
+    border-top: 1px solid rgba(255, 250, 240, 0.25);
+}
+
+.contact-link {
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    gap: 24px;
+    align-items: center;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(255, 250, 240, 0.25);
+}
+
+.contact-link > span:first-child {
+    color: #ff765a;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.contact-link strong {
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.contact-link:hover {
+    color: #ffb6a5;
+}
+
 
