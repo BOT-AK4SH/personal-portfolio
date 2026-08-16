@@ -39,6 +39,7 @@ ul {
     left: 0;
     width: 100%;
     z-index: 1000;
+    color: #fff4dc;
     background-color: transparent;
     border-bottom: none;
 }
@@ -93,7 +94,11 @@ h2 {
     font-size: 2.25rem;
 }
 
-/* second part */
+
+
+/* second part hero */
+
+
 
 .hero {
     min-height: 100vh;
@@ -142,6 +147,7 @@ h2 {
     flex-wrap: wrap;
     gap: 14px;
     margin-top: 32px;
+    
 }
 
 .button {
@@ -167,3 +173,112 @@ h2 {
 .button:hover {
     transform: translateY(-2px);
 }
+
+
+/* third part about */
+
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 64px;
+    background-color: var(--background);
+}
+
+.section-label {
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    max-width: 900px;
+    margin-top: 12px;
+    font-size: clamp(2.6rem, 5vw, 5rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.about-copy {
+    max-width: 700px;
+    font-size: 1.1rem;
+}
+
+.about-copy p + p {
+    margin-top: 24px;
+}
+
+.about-facts {
+    border-top: 1px solid var(--border);
+}
+
+.about-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 24px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.about-item h3 {
+    color: var(--accent);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+
+
+/* fourth part skill */
+
+
+
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 56px;
+    background-color: var(--surface);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    max-width: 850px;
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    padding: 12px 22px;
+    color: var(--text);
+    background-color: transparent;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.skill-tag:hover {
+    color: var(--surface);
+    background-color: var(--accent);
+    transform: translateY(-2px);
+}
+
