@@ -1,10 +1,10 @@
 # Personal Portfolio Website
 
-This is my personal portfolio website created using HTML, CSS, and JavaScript. It introduces me as an aspiring DevOps and Cloud Engineer and displays my skills, academic projects, and contact information.
+This is my personal portfolio website created using HTML, CSS, and JavaScript.
 
 ## Live Website
 
-website link.
+[View Live Portfolio](https://personal-portfolio-e5p.pages.dev)
 
 ## Website Sections
 
@@ -19,7 +19,7 @@ website link.
 - HTML
 - CSS
 - JavaScript
-- Google Fonts
+- Google Fonts (Cormorant Garamond,Inter)
 
 ## Features
 
