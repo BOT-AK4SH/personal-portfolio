@@ -19,6 +19,7 @@ This is my personal portfolio website created using HTML, CSS, and JavaScript.
 - HTML
 - CSS
 - JavaScript
+- Cloudflare(Hosting)
 - Google Fonts (Cormorant Garamond,Inter)
 
 ## Features
